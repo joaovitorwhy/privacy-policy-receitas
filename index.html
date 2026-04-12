@@ -1,116 +1,415 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>PolíticadePrivacidade—Receitas</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-font-family:-apple-system,BlinkMacSystemFont,"SegoeUI",Roboto,sans-serif;
-background:#f9f9f9;
-color:#212529;
-line-height:1.7;
-}
-.container{
-max-width:760px;
-margin:0auto;
-padding:48px24px;
-background:#fff;
-min-height:100vh;
-}
-h1{font-size:28px;color:#009688;margin-bottom:4px;}
-.updated{font-size:13px;color:#868e96;margin-bottom:36px;}
-h2{font-size:18px;margin:32px010px;color:#009688;}
-p{margin-bottom:12px;}
-ul{padding-left:20px;margin-bottom:12px;}
-ulli{margin-bottom:6px;}
-a{color:#009688;}
-footer{margin-top:48px;font-size:13px;color:#868e96;border-top:1pxsolid#dee2e6;padding-top:20px;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — Receitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:        #00897B;
+      --teal-light:  #E0F2F1;
+      --teal-mid:    #4DB6AC;
+      --ink:         #1a1a2e;
+      --muted:       #6b7280;
+      --rule:        #e5e7eb;
+      --bg:          #FAFAF8;
+      --card:        #ffffff;
+      --radius:      12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Header strip ── */
+    .header {
+      background: var(--teal);
+      padding: 48px 24px 40px;
+      margin-bottom: 0;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .app-badge svg { width: 14px; height: 14px; }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .updated {
+      font-size: 13px;
+      color: rgba(255,255,255,.7);
+      letter-spacing: .02em;
+    }
+
+    /* ── Intro card ── */
+    .intro-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--teal);
+      border-radius: 0 0 var(--radius) var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #374151;
+    }
+    .intro-card strong { color: var(--teal); }
+    .intro-card code {
+      background: var(--teal-light);
+      color: var(--teal);
+      font-size: 12.5px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 40px;
+      animation: fadeUp .4s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .section:nth-child(1) { animation-delay: .05s }
+    .section:nth-child(2) { animation-delay: .10s }
+    .section:nth-child(3) { animation-delay: .15s }
+    .section:nth-child(4) { animation-delay: .20s }
+    .section:nth-child(5) { animation-delay: .25s }
+    .section:nth-child(6) { animation-delay: .30s }
+    .section:nth-child(7) { animation-delay: .35s }
+    .section:nth-child(8) { animation-delay: .40s }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--teal-light);
+      color: var(--teal);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: #374151; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    ul li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #374151;
+    }
+    ul li::before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal-mid);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── Permission cards ── */
+    .perm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    @media (max-width: 520px) { .perm-grid { grid-template-columns: 1fr; } }
+
+    .perm-card {
+      background: var(--teal-light);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+    .perm-card .perm-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: var(--teal);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .perm-card .perm-title svg {
+      width: 18px; height: 18px; flex-shrink: 0;
+    }
+    .perm-card p { font-size: 13.5px; margin: 0; }
+
+    .revoke-note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 10px !important;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .highlight p { color: #1f5c57; margin: 0; font-size: 14.5px; }
+    .highlight strong { color: var(--teal); }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0 0 40px;
+    }
+
+    /* ── Contact ── */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal-mid);
+      padding-bottom: 1px;
+      transition: opacity .15s;
+    }
+    .contact-link:hover { opacity: .75; }
+    .contact-link svg { width: 16px; height: 16px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 28px;
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    footer span { display: flex; align-items: center; gap: 6px; }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>PolíticadePrivacidade</h1>
-<p class="updated">Últimaatualização:abrilde2026</p>
 
-<p>
-EstaPolíticadePrivacidadedescrevecomooaplicativo<strong>Receitas</strong>
-(<code>com.joao.receitas</code>)coleta,usaearmazenainformaçõesquandovocê
-utilizanossoserviço.
-</p>
+<!-- ── Header ── -->
+<div class="header">
+  <div class="header-inner">
+    <div class="app-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2a10 10 0 0 1 10 10c0 3-1.3 5.7-3.4 7.6M9 22H6a2 2 0 0 1-2-2v-4"/>
+        <path d="M12 8v4l3 3"/>
+      </svg>
+      Receitas · com.joao.receitas
+    </div>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: abril de 2026</p>
+  </div>
+</div>
 
-<h2>1.Informaçõesquecoletamos</h2>
-<p>Oaplicativo<strong>nãocoletanemtransmitedadospessoais</strong>paraservidoresexternos.Todasasinformaçõessãoarmazenadaslocalmentenoseudispositivo:</p>
-<ul>
-<li>Receitascriadasporvocê(título,ingredientes,passos,foto)</li>
-<li>Receitasmarcadascomofavoritas</li>
-<li>Avaliaçõeseplanosderefeição</li>
-<li>Listadecompras</li>
-</ul>
+<!-- ── Main content ── -->
+<div class="page">
 
-<h2>2.Permissõesdodispositivo</h2>
-<p>Oaplicativopodesolicitarasseguintespermissões:</p>
-<ul>
-<li>
-<strong>BibliotecadeFotos:</strong>usadaexclusivamenteparaquevocê
-escolhaumaimagemdasuagaleriaaocriaroueditarumareceita.Nenhuma
-fotoéenviadaparaservidoresexternos.
-</li>
-<li>
-<strong>Câmera:</strong>usadaexclusivamenteparatirarumafotonomomento
-decriaroueditarumareceita.Aimagemésalvaapenasnoseudispositivo.
-</li>
-</ul>
-<p>Vocêpoderevogaressaspermissõesaqualquermomentonasconfiguraçõesdoseudispositivo.</p>
+  <!-- Intro -->
+  <div class="intro-card">
+    Esta Política de Privacidade descreve como o aplicativo <strong>Receitas</strong>
+    (<code>com.joao.receitas</code>) coleta, usa e armazena informações quando
+    você utiliza nosso serviço.
+  </div>
 
-<h2>3.Armazenamentodedados</h2>
-<p>
-Todososdadosgeradospelousodoaplicativo(receitas,favoritos,avaliações,
-planoselistadecompras)sãoarmazenadoslocalmentenodispositivousando
-armazenamentosegurodosistemaoperacional.Essesdadosnãosãocompartilhados
-comterceirosnemenviadosparaainternet.
-</p>
+  <!-- 1 -->
+  <div class="section">
+    <h2><span class="num">1</span> Informações que coletamos</h2>
+    <div class="highlight">
+      <p>O aplicativo <strong>não coleta nem transmite dados pessoais</strong> para
+      servidores externos. Todas as informações são armazenadas localmente no seu dispositivo.</p>
+    </div>
+    <ul>
+      <li>Receitas criadas por você (título, ingredientes, passos, foto)</li>
+      <li>Receitas marcadas como favoritas</li>
+      <li>Avaliações e planos de refeição</li>
+      <li>Lista de compras</li>
+    </ul>
+  </div>
+  <hr />
 
-<h2>4.Compartilhamentodedados</h2>
-<p>
-Nãovendemos,alugamosnemcompartilhamosnenhumainformaçãosuacomterceiros.
-Oaplicativonãopossuiintegraçõescomredessociais,serviçosdeanáliseou
-publicidadequecoletemdadosdousuário.
-</p>
+  <!-- 2 -->
+  <div class="section">
+    <h2><span class="num">2</span> Permissões do dispositivo</h2>
+    <p>O aplicativo pode solicitar as seguintes permissões:</p>
+    <div class="perm-grid">
+      <div class="perm-card">
+        <div class="perm-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          Biblioteca de Fotos
+        </div>
+        <p>Usada exclusivamente para escolher uma imagem da sua galeria ao criar ou editar uma receita. Nenhuma foto é enviada para servidores externos.</p>
+      </div>
+      <div class="perm-card">
+        <div class="perm-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          Câmera
+        </div>
+        <p>Usada exclusivamente para tirar uma foto ao criar ou editar uma receita. A imagem é salva apenas no seu dispositivo.</p>
+      </div>
+    </div>
+    <p class="revoke-note">Você pode revogar essas permissões a qualquer momento nas configurações do seu dispositivo.</p>
+  </div>
+  <hr />
 
-<h2>5.Retençãodedados</h2>
-<p>
-Osdadossãomantidosnodispositivoenquantooaplicativoestiverinstalado.
-Aodesinstalaroaplicativo,todososdadoslocaissãoremovidosautomaticamente
-pelosistemaoperacional.
-</p>
+  <!-- 3 -->
+  <div class="section">
+    <h2><span class="num">3</span> Armazenamento de dados</h2>
+    <p>
+      Todos os dados gerados pelo uso do aplicativo — receitas, favoritos, avaliações,
+      planos e lista de compras — são armazenados localmente no dispositivo usando o
+      armazenamento seguro do sistema operacional. Esses dados não são compartilhados
+      com terceiros nem enviados para a internet.
+    </p>
+  </div>
+  <hr />
 
-<h2>6.Privacidadedecrianças</h2>
-<p>
-Oaplicativonãoédirecionadoacriançasmenoresde13anosenãocoleta
-intencionalmenteinformaçõesdecrianças.Sevocêacreditaqueseufilhoforneceu
-informaçõespormeiodoaplicativo,entreemcontatoconoscoparaquepossamos
-tomarasmedidasadequadas.
-</p>
+  <!-- 4 -->
+  <div class="section">
+    <h2><span class="num">4</span> Compartilhamento de dados</h2>
+    <p>
+      Não vendemos, alugamos nem compartilhamos nenhuma informação sua com terceiros.
+      O aplicativo não possui integrações com redes sociais, serviços de análise ou
+      publicidade que coletam dados do usuário.
+    </p>
+  </div>
+  <hr />
 
-<h2>7.Alteraçõesnestapolítica</h2>
-<p>
-PodemosatualizarestaPolíticadePrivacidadeocasionalmente.Recomendamos
-quevocêreviseestapáginaperiodicamente.Asalteraçõesentramemvigor
-imediatamenteapósapublicação.
-</p>
+  <!-- 5 -->
+  <div class="section">
+    <h2><span class="num">5</span> Retenção de dados</h2>
+    <p>
+      Os dados são mantidos no dispositivo enquanto o aplicativo estiver instalado.
+      Ao desinstalar o aplicativo, todos os dados locais são removidos automaticamente
+      pelo sistema operacional.
+    </p>
+  </div>
+  <hr />
 
-<h2>8.Contato</h2>
-<p>
-SetiverdúvidassobreestaPolíticadePrivacidade,entreemcontato:
-<br />
-<a href="mailto:joaovitorwhy@gmail.com">joaovitorwhy@gmail.com</a>
-</p>
+  <!-- 6 -->
+  <div class="section">
+    <h2><span class="num">6</span> Privacidade de crianças</h2>
+    <p>
+      O aplicativo não é direcionado a crianças menores de 13 anos e não coleta
+      intencionalmente informações de crianças. Se você acredita que seu filho forneceu
+      informações por meio do aplicativo, entre em contato conosco para que possamos
+      tomar as medidas adequadas.
+    </p>
+  </div>
+  <hr />
 
-<footer>
-&copy;2026Receitas.Todososdireitosreservados.
-</footer>
+  <!-- 7 -->
+  <div class="section">
+    <h2><span class="num">7</span> Alterações nesta política</h2>
+    <p>
+      Podemos atualizar esta Política de Privacidade ocasionalmente. Recomendamos
+      que você revise esta página periodicamente. As alterações entram em vigor
+      imediatamente após a publicação.
+    </p>
+  </div>
+  <hr />
+
+  <!-- 8 -->
+  <div class="section">
+    <h2><span class="num">8</span> Contato</h2>
+    <p>Se tiver dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+    <a class="contact-link" href="mailto:joaovitorwhy@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      joaovitorwhy@gmail.com
+    </a>
+  </div>
+
+  <footer>
+    <span>© 2026 Receitas. Todos os direitos reservados.</span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Seus dados ficam só com você.
+    </span>
+  </footer>
+
 </div>
 </body>
 </html>
